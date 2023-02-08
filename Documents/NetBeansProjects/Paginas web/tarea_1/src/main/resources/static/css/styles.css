@@ -1,0 +1,327 @@
+
+/* 
+    Created on : 6 feb 2023, 19:53:31
+    Author     : Ignacio Barquero
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.header{
+    display: flex;
+    position: relative;
+}
+
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.logo{
+    color: #303030;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.menu .navbar ul li{
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a{
+    font-size: 18px;
+    padding: 20px;
+    color: #303030;
+    display: block;
+    font-weight: 600;
+}
+
+#men{
+    display: none;
+}
+
+.menu-icono{
+    width: 25px;
+}
+
+.menu label{
+    cursor: pointer;
+    display: none;
+}
+
+.bg{
+    position: absolute;
+    width: 600px;
+    height: 700px;
+    z-index: -1;
+    right: 0;
+}
+
+.header-info{
+    display: flex;
+    align-items: center;
+    margin-top: 150px;
+}
+
+.header-txt{
+    white: 50%;
+    padding-right: 35px;
+}
+
+.header-txt h1{
+    font-size: 55px;
+    line-height: 70px;
+    font-weight: 600;
+    color: #303030;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+}
+
+.header-txt p{
+    font-size: 16px;
+    color: #545454;
+    margin-bottom: 35px;
+}
+
+.btn-1{
+    display: inline-block;
+    background-color: #FF9F00;
+    padding: 13px 30px;
+    border-radius: 25px;
+    color: #ffffff;
+    text-transform: capitalize;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-1:hover{
+    background-color: #EE9003;
+}
+
+.header-img{
+    width: 50%;
+}
+
+.header-img img{
+    width: 650px;
+}
+
+.info {
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-1{
+    width: 270px;
+    padding: 15px 25px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    border-radius: 20px;
+}
+
+.info-1 img{
+    width: 30px;
+}
+
+.info-1 h3{
+    font-size: 18px;
+    color: #303030;
+    margin-bottom: 10px;
+}
+
+.info-1 p{
+    font-size: 16px;
+    color: #545454
+}
+
+.nosotros{
+    position: relative;
+}
+
+.bg-2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    white: 100px;
+    height: 1100px;
+    z-index: -1;
+}
+
+.nosotros-info{
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+}
+
+.nosotros-img{
+    white: 50%;
+}
+
+.nosotros-img img{
+    white: 650px;
+}
+
+.nosotros-txt{
+    white: 50%;
+}
+
+.nosotros-txt span{
+    font-size: 16px;
+    color: #FF9F00;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.nosotros-txt h2{
+    font-size: 45px;
+    color: #303030;
+    margin-bottom: 30px;
+}
+
+.nosotros-txt p {
+    font-size: 18px;
+    color: #545454;
+    margin-bottom: 50px;
+}
+
+.products {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.products h2{
+    font-size: 18px;
+    color: #303030;
+    margin-bottom: 30px;
+}
+
+products p{
+    font-size: 18px;
+    color: #545454;
+    margin-bottom: 70px;
+    padding: 0 200px;
+}
+
+.product{
+    padding-bottom: 35px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    border-radius: 20px;
+}
+
+.product img{
+    white: 100px;
+    height: 200px;
+    border-radius: 25px 25px 0 0;
+}
+
+product h3{
+    font-size: 20px;
+    color: #303030;
+    margin-bottom: 15px;
+}
+
+product p {
+    font-size: 16px;
+    padding: 30px;
+    color: #545454;
+    margin: 0;
+}
+
+.product span{
+    background-color: #FF9F00;
+    padding: 10px;
+    color: #ffffff;
+    border-radius: 15px;
+}
+
+hr{
+    border: 1px solid #EEE;
+}
+
+.footer{
+    padding: 100px 0;
+}
+
+.footer-link{
+    display: flex;
+    justify-content: space-between;
+}
+
+.link h3{
+    font-size: 20px;
+    color: #303030;
+    margin-bottom: 10px;
+}
+
+.socials img{
+    margin-right: 15px;
+}
+
+.card {
+  width: 400px;
+  margin: 50px auto;
+  padding: 40px;
+  text-align: center;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.face-img {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+a {
+  font-size: 16px;
+  margin-bottom: 10px;
+  display: block;
+  color: #545454;
+}
