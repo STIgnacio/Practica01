@@ -1,6 +1,7 @@
 
 package com.tienda_v1.domain;
 
+import jakarta.persistence.*;
 import java.io.Serializable;
 import lombok.Data;
 
@@ -10,7 +11,7 @@ import lombok.Data;
  */
 @Data
 @Entity
-@Table(name="cliente")
+@Table(name= "cliente")
 public class Cliente implements Serializable{
     private static final long serialVersioniUID = 1L;
     
@@ -32,6 +33,4 @@ public class Cliente implements Serializable{
         this.correo = correo;
         this.telefono = telefono;
     }
-    
-    
 }
