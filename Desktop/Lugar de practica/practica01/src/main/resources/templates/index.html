@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TechShop</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        <h2>Listado de Paises</h2>
+        <br>
+        <hr>
+        <a th:href="@{/aduana/nuevo}">Nuevo Pais</a>
+        <div th:if="${aduanas !=null and !aduanas.empty}">
+            <table border="0">
+            <thead>
+                <tr>
+                    <th>Estado</th>
+                    <th>Capital</th>
+                    <th>Poblacion</th>
+                    <th>Costa</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="aduana : ${aduanas}">
+                    <td>[[${aduana.estado}]]</td>
+                    <td>[[${aduana.capital}]]</td>
+                    <td>[[${aduana.poblacion}]]</td>
+                    <td>[[${aduana.costa}]]</td>
+                    <td><a th:href="@{/aduana/eliminar/} + ${aduana.idAduana}">Eliminar</a></td>
+                    <td><a th:href="@{/aduana/modificar/} + ${aduana.idAduana}">Modificar</a></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        
+        <div th:if="${aduanas == null or aduanas.empty}">
+            <h3>No hay paises que mostrar</h3>
+        </div>
+        
+    </body>
+</html>

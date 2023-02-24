@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TechShop</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        <h2>Datos de Paises</h2>
+        <br>
+        <hr>
+        <a th:href="@{/}">Regresar</a>
+        
+        <form th:action="@{/aduana/guardar}"
+              method="post"
+              th:object="${aduana}">
+            
+            <input type="hidden" 
+                   name="idAduana" 
+                   th:field="*{idAduana}"/>
+            
+            <label>Estado</label>
+            <input type="text" 
+                   name="estado" 
+                   value="" 
+                   th:field="*{estado}" 
+                   size="20" />
+            <br>
+            <label>Capital</label>
+            <input type="text" 
+                   name="capital" 
+                   value="" 
+                   th:field="*{capital}" 
+                   size="20" />
+            <br>
+            <label>Poblacion</label>
+            <input type="number" 
+                   name="poblacion" 
+                   value="" 
+                   th:field="*{poblacion}" 
+                   size="20" />
+            <br>
+            <label>Costas</label>
+            <input type="number" 
+                   name="costas" 
+                   value="" 
+                   th:field="*{costas}" 
+                   size="20" />
+            <br>
+            <input type="submit" value="Guardar" />
+            
+        </form>
+        
+    </body>
+</html>
