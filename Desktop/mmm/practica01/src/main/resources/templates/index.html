@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TechShop</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <link href="../static/css/estilos.css" rel="stylesheet" type="text/css"/>
+        <h2>Listado Paises</h2>
+        <br>
+        <hr>
+        <a th:href="@{/cliente/nuevo}">Nuevo Pais</a>
+        <div th:if="${clientes !=null and !clientes.empty}">
+            <table border="0">
+            <thead>
+                <tr>
+                    <th>Estado</th>
+                    <th>Capital</th>
+                    <th>Poblacion</th>
+                    <th>Costas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="cliente : ${clientes}">
+                    <td>[[${cliente.estado}]]</td>
+                    <td>[[${cliente.capital}]]</td>
+                    <td>[[${cliente.poblacion}]]</td>
+                    <td>[[${cliente.costas}]]</td>
+                    <td><a th:href="@{/cliente/eliminar/} + ${cliente.idCliente}">Eliminar</a></td>
+                    <td><a th:href="@{/cliente/modificar/} + ${cliente.idCliente}">Modificar</a></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        
+        <div th:if="${clientes == null or clientes.empty}">
+            <h3>No hay paises que mostrar</h3>
+        </div>
+        
+    </body>
+</html>
