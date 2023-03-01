@@ -1,4 +1,3 @@
-
 package com.practica01.domain;
 
 import jakarta.persistence.*;
